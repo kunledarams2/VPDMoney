@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">VPDMoney</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="admin_sub_title_sign_in">Don’t have an account?  <font fgcolor='#008DFA'> <b>Create one here.</b> </font>.</string>
+    <string name="no_account_alert">Oops! Seems like you don’t have an account with us yet.<font fgcolor='#008DFA'> <b>Sign up here</b> </font> or contact your organization admin.</string>
+    <string name="frozen_account_alert">Oops! Seems like you have frozen this account.<font fgcolor='#008DFA'> <b>Unfreeze here</b> </font> or contact your organization admin.</string>
+    <string name="close_account_alert">Oops! Seems like you have closed this account.<font fgcolor='#008DFA'> <b>Open here</b> </font> or contact your organization admin.</string>
+    <string name="three_attempt_error_login">You’ve failed 3 login attempts so far. <font fgcolor='#008DFA'> <b>Click here to reset your password</b> </font>  instead.</string>
+    <string name="privacyandterm">I agree to VPDMoney’s <font fgcolor='#008DFA'><b> Privacy Policy </b></font> and <font fgcolor='#008DFA'><b> Terms of Use</b></font>.</string>
+
+    <string name="verify_email">Didn’t get an email?  <font fgcolor='#008DFA'><b> Resend email </b></font></string>
+    <string name="congratulation">Congratulations! 🎉</string>
+    <string name="well_done">You’re almost done!</string>
+</resources>

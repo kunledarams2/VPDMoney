@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".views.account.AccountDetailFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/nav_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_white"
+            android:elevation="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/nav_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/acc_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:text="Salary"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nav_btn"
+            app:layout_constraintTop_toTopOf="@+id/nav_btn" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/acc_name">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/account_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppinslight"
+                    android:text="Account balance"
+
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/account_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="₦123,090.90"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/account_name"
+                    app:layout_constraintStart_toStartOf="@+id/account_name"
+                    app:layout_constraintTop_toBottomOf="@+id/account_name" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/light_black_gradient_button"
+                    android:fontFamily="@font/poppinslight"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    android:text="View details"
+                    android:textColor="#232324"
+                    android:textFontWeight="600"
+                    app:layout_constraintBottom_toBottomOf="@+id/account_balance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/account_name" />
+
+                <LinearLayout
+                    android:id="@+id/account_status_wrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/oval_orange_stroke"
+                    android:backgroundTint="#E6F5F2"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/account_balance"
+                    app:layout_constraintTop_toBottomOf="@+id/account_balance">
+
+                    <ImageView
+                        android:id="@+id/status_indicator"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/oval_blue"
+                        android:backgroundTint="#1CA888" />
+
+                    <TextView
+                        android:id="@+id/account_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/poppinslight"
+                        android:padding="5dp"
+                        android:text="Active"
+                        android:textSize="11sp"
+                        android:textColor="#12836F" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/send_money_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Send"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reciev_money_icon"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Receive"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/reciev_money_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Pay bills"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Recent transactions"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/light_black_gradient_button"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:text="See all"
+            android:textFontWeight="600"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:itemCount="5"
+            tools:listitem="@layout/group_transaction_item" />
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</layout>

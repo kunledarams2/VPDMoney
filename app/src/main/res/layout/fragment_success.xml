@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.send.SuccessFragment"
+        android:background="#F7F9FB">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/successful_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transaction_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Successful!"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/trans_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Your transfer is on the way!"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/transaction_status"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

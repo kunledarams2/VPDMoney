@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ImageView
+            android:id="@+id/nav_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_white"
+            android:elevation="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/failed_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Account details"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/light_black_gradient_button"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:text="Share"
+            android:textFontWeight="600"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppinslight"
+            android:text="Name of account"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Brand &amp; Marketing"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinslight"
+            android:text="Account holder"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/account_name"
+            app:layout_constraintStart_toStartOf="@+id/account_name"
+            app:layout_constraintTop_toBottomOf="@+id/account_name" />
+
+        <TextView
+            android:id="@+id/account_holder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Orthonga Ltd."
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinslight"
+            android:text="Bank name"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/account_holder"
+            app:layout_constraintStart_toStartOf="@+id/account_holder"
+            app:layout_constraintTop_toBottomOf="@+id/account_holder" />
+
+        <TextView
+            android:id="@+id/account_bank_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Providus Bank"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView23"
+            app:layout_constraintStart_toStartOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinslight"
+            android:text="Account number"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="500"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/account_bank_name"
+            app:layout_constraintStart_toStartOf="@+id/account_bank_name"
+            app:layout_constraintTop_toBottomOf="@+id/account_bank_name" />
+
+        <TextView
+            android:id="@+id/account_bank_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="1738820182"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView24"
+            app:layout_constraintStart_toStartOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

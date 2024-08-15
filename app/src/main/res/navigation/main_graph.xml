@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.e.vpdmoney.views.home.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_nav_home_to_transactionReceiptFragment"
+            app:destination="@id/transactionReceiptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.e.vpdmoney.views.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_nav_account_to_accountDetailFragment"
+            app:destination="@id/accountDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountDetailFragment"
+        android:name="com.e.vpdmoney.views.account.AccountDetailFragment"
+        android:label="fragment_account_detail"
+        tools:layout="@layout/fragment_account_detail" >
+        <action
+            android:id="@+id/action_accountDetailFragment_to_nav_account"
+            app:destination="@id/nav_account" />
+        <argument
+            android:name="accountDetail"
+            app:argType="com.e.vpdmoney.model.response.AccountDatum" />
+        <action
+            android:id="@+id/action_accountDetailFragment_to_recipientFragment"
+            app:destination="@id/recipientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.e.vpdmoney.views.send.SendFragment"
+        android:label="SendFragment"
+        tools:layout="@layout/fragment_send" >
+        <action
+            android:id="@+id/action_nav_send_to_recipientFragment"
+            app:destination="@id/recipientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipientFragment"
+        android:name="com.e.vpdmoney.views.send.RecipientFragment"
+        android:label="RecipientFragment"
+        tools:layout="@layout/fragment_recipient">
+        <action
+            android:id="@+id/action_recipientFragment_to_amountFragment"
+            app:destination="@id/amountFragment" />
+        <action
+            android:id="@+id/action_recipientFragment_to_nav_send"
+            app:destination="@id/nav_send" />
+        <argument
+            android:name="accountDetail"
+            app:argType="com.e.vpdmoney.model.response.AccountDatum" />
+    </fragment>
+    <fragment
+        android:id="@+id/amountFragment"
+        android:name="com.e.vpdmoney.views.send.AmountFragment"
+        android:label="AmountFragment"
+        tools:layout="@layout/fragment_amount">
+        <action
+            android:id="@+id/action_amountFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+        <action
+            android:id="@+id/action_amountFragment_to_recipientFragment"
+            app:destination="@id/recipientFragment" />
+        <argument
+            android:name="accountDetail"
+            app:argType="com.e.vpdmoney.model.response.AccountDatum" />
+        <argument
+            android:name="transferRequest"
+            app:argType="com.e.vpdmoney.model.request.TransferRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.e.vpdmoney.views.send.ConfirmFragment"
+        android:label="ConfirmFragment"
+        tools:layout="@layout/fragment_confirm">
+        <action
+            android:id="@+id/action_confirmFragment_to_amountFragment"
+            app:destination="@id/amountFragment" />
+        <action
+            android:id="@+id/action_confirmFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+        <argument
+            android:name="accountDetail"
+            app:argType="com.e.vpdmoney.model.response.AccountDatum" />
+        <argument
+            android:name="transferRequest"
+            app:argType="com.e.vpdmoney.model.request.TransferRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.e.vpdmoney.views.send.SuccessFragment"
+        android:label="SuccessFragment"
+        tools:layout="@layout/fragment_success">
+        <action
+            android:id="@+id/action_successFragment_to_transactionReceiptFragment"
+            app:destination="@id/transactionReceiptFragment" />
+        <argument
+            android:name="transferRequest"
+            app:argType="com.e.vpdmoney.model.request.TransferRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionReceiptFragment"
+        android:name="com.e.vpdmoney.views.send.TransactionReceiptFragment"
+        android:label="fragment_transaction_receipt"
+        tools:layout="@layout/fragment_transaction_receipt" >
+        <action
+            android:id="@+id/action_transactionReceiptFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="transferData"
+            app:argType="com.e.vpdmoney.model.request.TransferRequest" />
+    </fragment>
+</navigation>

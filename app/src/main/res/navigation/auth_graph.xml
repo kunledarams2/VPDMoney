@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.e.vpdmoney.views.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_regFragmentOne"
+            app:destination="@id/regFragmentOne" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/regFragmentOne"
+        android:name="com.e.vpdmoney.views.auth.RegFragmentOne"
+        android:label="fragment_reg_one"
+        tools:layout="@layout/fragment_reg_one" >
+        <action
+            android:id="@+id/action_regFragmentOne_to_regFragmentTwo"
+            app:destination="@id/regFragmentTwo" />
+        <action
+            android:id="@+id/action_regFragmentOne_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regFragmentTwo"
+        android:name="com.e.vpdmoney.views.auth.RegFragmentTwo"
+        android:label="fragment_reg_two"
+        tools:layout="@layout/fragment_reg_two" >
+        <action
+            android:id="@+id/action_regFragmentTwo_to_regFragmentThree"
+            app:destination="@id/regFragmentThree" />
+        <action
+            android:id="@+id/action_regFragmentTwo_to_regFragmentOne"
+            app:destination="@id/regFragmentOne" />
+        <argument
+            android:name="createUserRequest"
+            app:argType="com.e.vpdmoney.model.request.CreateUserRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/regFragmentThree"
+        android:name="com.e.vpdmoney.views.auth.RegFragmentThree"
+        android:label="fragment_reg_three"
+        tools:layout="@layout/fragment_reg_three" >
+        <action
+            android:id="@+id/action_regFragmentThree_to_regFragmentTwo"
+            app:destination="@id/regFragmentTwo" />
+        <argument
+            android:name="createUserRequest"
+            app:argType="com.e.vpdmoney.model.request.CreateUserRequest" />
+        <action
+            android:id="@+id/action_regFragmentThree_to_regFragmentOne"
+            app:destination="@id/regFragmentOne" />
+
+    </fragment>
+</navigation>

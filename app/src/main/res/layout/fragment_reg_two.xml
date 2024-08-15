@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".auth.RegFragmentTwo">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="260dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="30dp"
+            android:background="#008DFA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/header_wrapper"
+            layout="@layout/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/graphikregular"
+
+            android:text="Password"
+            app:layout_constraintStart_toStartOf="@+id/header_wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/header_wrapper" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            android:background="@drawable/edit_box"
+            app:layout_constraintEnd_toEndOf="@+id/header_wrapper"
+            app:layout_constraintStart_toStartOf="@+id/textView46"
+            app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/graphikregular"
+                android:hint="Enter New Pin"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColorHint="#BABEC2"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/showHidePassword_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showHidePassword_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/graphikregular"
+                android:padding="10dp"
+                android:text="Show"
+                android:textColor="#232324"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/old_password_layout"
+             style="@style/TextInputLayoutStyle"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+
+             android:layout_marginStart="10dp"
+             android:layout_marginTop="200dp"
+
+             android:layout_marginEnd="10dp"
+             android:hint="Old Password"
+             android:padding="4dp"
+             android:textColorHint="#6A6C6E"
+             app:hintTextColor="#6A6C6E"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/old_password"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:backgroundTint="#6A6C6E"
+                 android:fontFamily="@font/graphik_regular"
+                 android:inputType="textPassword"
+                 android:textColor="#6A6C6E"
+
+                 />
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/new_password_layout"
+             style="@style/TextInputLayoutStyle"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+
+             android:layout_marginStart="10dp"
+
+             android:layout_marginTop="10dp"
+             android:layout_marginEnd="10dp"
+             android:hint="New Password"
+             android:padding="4dp"
+             android:textColorHint="#6A6C6E"
+             app:hintTextColor="#6A6C6E"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/old_password_layout">
+
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/new_password"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:backgroundTint="#6A6C6E"
+                 android:fontFamily="@font/graphik_regular"
+                 android:textColor="#6A6C6E"
+                 android:inputType="textPassword"
+
+                 />
+
+         </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/graphikmedium"
+            android:text="Password Requirements"
+            android:textColor="#1B1A23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout20" />
+
+        <ImageView
+            android:id="@+id/lowercase_image"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textView39"
+            app:layout_constraintStart_toStartOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/graphikregular"
+            android:text="Must have at least 1 lowercase letter"
+
+            app:layout_constraintStart_toEndOf="@+id/lowercase_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+        <ImageView
+            android:id="@+id/uppercase_image"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textView40"
+            app:layout_constraintStart_toStartOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="@+id/textView40" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/graphikregular"
+            android:text="Must have at least 1 uppercase letter"
+
+            app:layout_constraintStart_toEndOf="@+id/uppercase_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+        <ImageView
+            android:id="@+id/at_number_image"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textView41"
+            app:layout_constraintStart_toStartOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/graphikregular"
+            android:text="Must have at least 1 number"
+
+            app:layout_constraintStart_toEndOf="@+id/at_number_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+        <ImageView
+            android:id="@+id/six_len_image"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/oval_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textView42"
+            app:layout_constraintStart_toStartOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/graphikregular"
+            android:text="Must have 6 characters minimum"
+
+            app:layout_constraintStart_toEndOf="@+id/six_len_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/light_blue_gradient_button"
+            android:backgroundTint="@color/in_active_btn_color"
+            android:fontFamily="@font/graphikregular"
+            android:text="Next — Business information"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

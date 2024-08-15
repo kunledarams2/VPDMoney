@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.send.ConfirmFragment"
+        android:background="#F7F9FB">
+
+        <ImageView
+            android:id="@+id/nav_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_white"
+            android:elevation="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/nav_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Confirm your transfer"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/nav_btn"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="You are sending"
+            android:textColor="@color/sub_header_text_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:text="NGN 234,190.90"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Receiver name"
+                android:textColor="@color/sub_header_text_color"
+                android:textFontWeight="500"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/account_num_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="0219328190 - Guaranty Trust Bank"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/receiver_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Hogwarts Co."
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Account details"
+                android:textColor="@color/sub_header_text_color"
+                android:textFontWeight="500"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/receiver_name"
+                app:layout_constraintTop_toBottomOf="@+id/receiver_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Confirm transaction PIN"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+        <LinearLayout
+            android:id="@+id/codeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+            <EditText
+                android:id="@+id/digit1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_box"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/digit2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+
+                android:layout_weight="1"
+                android:background="@drawable/edit_box"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/digit3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_box"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/digit4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_box"
+                android:focusable="true"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppinsregular"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.send.AmountFragment"
+        android:background="#F7F9FB">
+        <ImageView
+            android:id="@+id/nav_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_white"
+            android:elevation="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/nav_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <include
+            android:id="@+id/notification"
+            layout="@layout/inner_notification_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Amount"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/nav_btn"
+            app:layout_constraintTop_toBottomOf="@+id/nav_btn" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="How much do you want to send?"
+            android:textColor="@color/sub_header_text_color"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Amount (NGN)"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/notification" />
+
+        <EditText
+            android:id="@+id/amount_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_box"
+            android:inputType="number"
+            android:fontFamily="@font/poppinslight"
+            android:padding="15dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Narration (optional)"
+
+            app:layout_constraintStart_toStartOf="@+id/amount_edt"
+            app:layout_constraintTop_toBottomOf="@+id/amount_edt" />
+
+        <EditText
+            android:id="@+id/narration_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_box"
+            android:inputType="text"
+            android:fontFamily="@font/poppinslight"
+            android:padding="15dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+        <TextView
+            android:id="@+id/textView423"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Fees (NGN)"
+
+            app:layout_constraintStart_toStartOf="@+id/amount_edt"
+            app:layout_constraintTop_toBottomOf="@+id/narration_edt" />
+
+        <EditText
+            android:id="@+id/fee_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_box"
+            android:inputType="number"
+            android:editable="false"
+            android:padding="15dp"
+            android:text="15.50"
+
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinslight"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView423" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ctn_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/light_blue_gradient_button"
+            android:backgroundTint="@color/in_active_btn_color"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
