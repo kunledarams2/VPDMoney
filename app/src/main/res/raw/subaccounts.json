@@ -30,7 +30,7 @@
     "account_name": "Dev",
     "account_balance": "600000",
     "currency": "NGN",
-    "account_number": "02356589056",
+    "account_number": "02306589056",
     "bank_name": "VFDMoney MFB",
     "account_holder": "John Evan.",
     "account_status": "Frozen"
@@ -40,7 +40,7 @@
     "account_name": "Dstv Subscription",
     "account_balance": "20000",
     "currency": "NGN",
-    "account_number": "02356589056",
+    "account_number": "02356889056",
     "bank_name": "VFDMoney MFB",
     "account_holder": "John Evan.",
     "account_status": "Closed"

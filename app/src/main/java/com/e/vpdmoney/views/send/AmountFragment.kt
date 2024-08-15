@@ -45,11 +45,13 @@ class AmountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.amountEdt.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                binding.notification.innerNotifWrapper.visibility=View.GONE
                 if(p0.toString().length > 2){
                     enableButton(true)
                 }else{
@@ -98,6 +100,7 @@ class AmountFragment : Fragment() {
                 }
             }
         }
+        binding.feeEdt.isEnabled=false
     }
 
     private fun enableButton(isButtonEnable:Boolean){

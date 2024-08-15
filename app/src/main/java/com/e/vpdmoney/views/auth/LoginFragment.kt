@@ -6,6 +6,8 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,6 +23,7 @@ class LoginFragment : Fragment() {
 
     lateinit var binding:FragmentLoginBinding
     private var isValidated= false
+    private var isPasswordShown = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -44,7 +47,7 @@ class LoginFragment : Fragment() {
             if (isValidated){
                 if (!Pattern.matches(Patterns.EMAIL_ADDRESS.pattern(), binding.phEmailEdt.text.toString())){
                     binding.notification.innerNotifWrapper.visibility = View.VISIBLE
-                    binding.notification.messageTv.text = "Invalided email address ...."
+                    binding.notification.messageTv.text = "Invalid email address ...."
                     return@setOnClickListener
                 }
                 if (observeEntry()){
@@ -70,12 +73,13 @@ class LoginFragment : Fragment() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 binding.notification.innerNotifWrapper.visibility = View.GONE
-                if(p0.toString().length > 2){
-                    if(binding.pinPasswordEdt.text.isNotEmpty() && Pattern.matches(Patterns.EMAIL_ADDRESS.pattern(), binding.phEmailEdt.text.toString()) ){
-                        enableButton(true)
+                if(p0.toString().isNotEmpty()){
+                    enableButton(true)
+                   /* if(binding.pinPasswordEdt.text.isNotEmpty() && Pattern.matches(Patterns.EMAIL_ADDRESS.pattern(), binding.phEmailEdt.text.toString()) ){
+
                     }else{
                         enableButton(false)
-                    }
+                    }*/
                 }else{
                     enableButton(false)
                 }
@@ -94,8 +98,8 @@ class LoginFragment : Fragment() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if(p0.toString().length > 6){
-                    if(  Pattern.matches(Patterns.EMAIL_ADDRESS.pattern(), binding.phEmailEdt.text.toString()) ){
+                if(p0.toString().isNotEmpty()){
+                    if( binding.phEmailEdt.text.isNotEmpty()){
                         enableButton(true)
                     }else{
                         enableButton(false)
@@ -111,6 +115,18 @@ class LoginFragment : Fragment() {
             }
 
         })
+
+        binding.textView5.setOnClickListener {
+            if (isPasswordShown){
+                binding.pinPasswordEdt.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                binding.textView5.text="Hide"
+                isPasswordShown = false
+            }else{
+                binding.pinPasswordEdt.transformationMethod = PasswordTransformationMethod.getInstance()
+                binding.textView5.text ="Show"
+                isPasswordShown = true
+            }
+        }
 
     }
 

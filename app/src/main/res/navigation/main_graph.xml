@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_accountDetailFragment_to_recipientFragment"
             app:destination="@id/recipientFragment" />
+        <action
+            android:id="@+id/action_accountDetailFragment_to_transactionReceiptFragment"
+            app:destination="@id/transactionReceiptFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_send"

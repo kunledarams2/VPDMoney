@@ -56,17 +56,20 @@ class HomePageFragment : Fragment(),
         localViewModel.loadingStatus.observe(viewLifecycleOwner){
             when(it){
                 LoadingStatus.Success->{
+                    if (!localViewModel.transferTransaction.value.isNullOrEmpty()){
+                        val groupedItems = groupTransactionsByDate(localViewModel.transferTransaction.value!!)
+                        val groupTransactionAdapter = GroupTransactionAdapter(groupedItems, this)
 
-                    val groupedItems = groupTransactionsByDate(localViewModel.transferTransaction.value!!)
-                    val groupTransactionAdapter = GroupTransactionAdapter(groupedItems, this)
-                    binding.apply {
-                        emptyLayout.emptyWrapper.visibility=View.GONE
-                        recyTransaction.apply {
-                            adapter = groupTransactionAdapter
-                           layoutManager = LinearLayoutManager(context)
-                           setHasFixedSize(false)
+                        binding.apply {
+                            emptyLayout.emptyWrapper.visibility=View.GONE
+                            recyTransaction.apply {
+                                adapter = groupTransactionAdapter
+                                layoutManager = LinearLayoutManager(context)
+                                setHasFixedSize(false)
+                            }
                         }
                     }
+
                 }
                 is LoadingStatus.Loading->{
 

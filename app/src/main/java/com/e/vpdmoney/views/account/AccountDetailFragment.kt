@@ -99,17 +99,21 @@ class AccountDetailFragment : Fragment(),  TransactionItemAdapter.OnTransactionC
         localViewModel.loadingStatus.observe(viewLifecycleOwner){
             when(it){
                 LoadingStatus.Success->{
-
-                    val groupedItems = groupTransactionsByDate(localViewModel.transferTransaction.value!!)
-                    val groupTransactionAdapter = GroupTransactionAdapter(groupedItems, this)
-                    binding.apply {
-                        emptyLayout.emptyWrapper.visibility=View.GONE
-                        recyTransaction.apply {
-                            adapter = groupTransactionAdapter
-                            layoutManager = LinearLayoutManager(context)
-                            setHasFixedSize(false)
+                    if (localViewModel.transferTransaction.value.isNullOrEmpty()){
+                        binding. emptyLayout.emptyWrapper.visibility=View.VISIBLE
+                    }else{
+                        val groupedItems = groupTransactionsByDate(localViewModel.transferTransaction.value!!)
+                        val groupTransactionAdapter = GroupTransactionAdapter(groupedItems, this)
+                        binding.apply {
+                            emptyLayout.emptyWrapper.visibility=View.GONE
+                            recyTransaction.apply {
+                                adapter = groupTransactionAdapter
+                                layoutManager = LinearLayoutManager(context)
+                                setHasFixedSize(false)
+                            }
                         }
                     }
+
                 }
                 is LoadingStatus.Loading->{
 
@@ -157,6 +161,6 @@ class AccountDetailFragment : Fragment(),  TransactionItemAdapter.OnTransactionC
     }
 
     override fun onTransactionClick(transaction: TransferRequest) {
-
+        findNavController().navigate(AccountDetailFragmentDirections.actionAccountDetailFragmentToRecipientFragment(args.accountDetail))
     }
 }

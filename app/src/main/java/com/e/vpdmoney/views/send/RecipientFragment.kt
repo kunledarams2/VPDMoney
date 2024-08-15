@@ -72,7 +72,9 @@ class RecipientFragment : Fragment() {
         setUpBankSpinner(response.data )
 
         binding.navBtn.setOnClickListener {
+
             findNavController().navigate(RecipientFragmentDirections.actionRecipientFragmentToNavSend())
+            mainActivity.showBottomNav()
 
         }
 
